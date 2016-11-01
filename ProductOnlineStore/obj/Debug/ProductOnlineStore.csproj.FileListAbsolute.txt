@@ -51,3 +51,9 @@ D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\b
 D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\obj\Debug\ProductOnlineStore.csprojResolveAssemblyReference.cache
 D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\obj\Debug\ProductOnlineStore.dll
 D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\obj\Debug\ProductOnlineStore.pdb
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Net.Http.Formatting.dll
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Web.Http.Common.dll
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Web.Http.dll
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Net.Http.Formatting.xml
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Web.Http.xml
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore\bin\System.Web.Http.Common.xml

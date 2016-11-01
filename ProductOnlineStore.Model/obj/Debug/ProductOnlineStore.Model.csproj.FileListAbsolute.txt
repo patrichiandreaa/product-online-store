@@ -1,0 +1,5 @@
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore.Model\bin\Debug\ProductOnlineStore.Model.dll
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore.Model\bin\Debug\ProductOnlineStore.Model.pdb
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore.Model\obj\Debug\ProductOnlineStore.Model.csprojResolveAssemblyReference.cache
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore.Model\obj\Debug\ProductOnlineStore.Model.dll
+D:\project mentoring\ProductsOnlineStore\ProductOnlineStore\ProductOnlineStore.Model\obj\Debug\ProductOnlineStore.Model.pdb
