@@ -1,0 +1,43 @@
+﻿{
+  "products": [
+    {
+       "Id": 1,
+      "Name": " Product1",
+      "Price": 20,
+      "Quantity": 100,
+      "Category": "Food", 
+      "Country": "Germany"
+    },
+    {
+       "Id": 2,
+      "Name": " Product2",
+      "Price": 30,
+      "Quantity": 90,
+      "Category": "Food", 
+       "Country": "Germany"
+    },
+    {
+       "Id": 3,
+      "Name": " Product3",
+      "Price": 20,
+      "Quantity": 20,
+      "Category": "Hair products", 
+       "Country": "China"
+    },
+    {
+       "Id": 4,
+      "Name": " Product4",
+      "Price": 40,
+      "Quantity": 30,
+      "Category": "Bikes",
+      "Country": "Germany"
+    },
+    {"Id": 5,
+      "Name": " Product5",
+      "Price": 20,
+      "Quantity": 30,
+      "Category": "Accessories",
+      "Country": "UK"
+    }
+  ]
+}
