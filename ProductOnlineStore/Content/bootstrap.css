@@ -36,6 +36,24 @@ summary {
   display: block;
 }
 
+footer
+{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:none;
+   border-style: solid;
+   border-top-color: black;
+    padding:15px;
+   
+  
+
+}
+}
+
+
 audio,
 canvas,
 video {
@@ -166,7 +184,10 @@ textarea {
   font-family: inherit;
   font-size: 100%;
 }
-
+ select {
+     margin-bottom: 10px;
+     width: 500px;
+ }
 button,
 input {
   line-height: normal;
@@ -325,6 +346,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  width: auto;
 }
 
 button,
@@ -4127,6 +4149,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
+      width: 100%;
   }
   .navbar-collapse.in {
     overflow-y: visible;
@@ -4146,6 +4169,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .container > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
+
 }
 
 @media (min-width: 768px) {
@@ -4153,6 +4177,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .container > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
+    
   }
 }
 
