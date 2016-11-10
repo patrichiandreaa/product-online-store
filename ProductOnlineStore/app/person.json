@@ -1,0 +1,39 @@
+﻿{
+  "customers": [
+    {
+      "Name": "Alfreds Futterkiste",
+      "City": "Berlin",
+      "Country": "Germany"
+    },
+    {
+      "Name": "Ana M",
+      "City": "México D.F.",
+      "Country": "Mexico"
+    },
+    {
+      "Name": "Antonio Moreno ",
+      "City": "México D.F.",
+      "Country": "Mexico"
+    },
+    {
+      "Name": "Around Brad",
+      "City": "London",
+      "Country": "UK"
+    },
+    {
+      "Name": "Brian Benny'",
+      "City": "London",
+      "Country": "UK"
+    },
+    {
+      "Name": " Marta Valeria",
+      "City": "Luleå",
+      "Country": "Sweden"
+    },
+    {
+      "Name": " Sandra CV",
+      "City": "Mannheim",
+      "Country": "Germany"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿<html>
+
+<head>
+    <title>AngularJS directives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+
+
+<p>#### Exemple for ng-model ####</p>
+    <div ng-app="">
+        <p>
+            Enter your Name: <input type="text" ng-model="name">
+        </p>
+        <p>
+            Hello <b ng-bind="name"></b>!
+        </p>
+
+
+        <p>####Exemple for ng-init,ng-repeat #####</p>
+
+        <div ng-init="countries=[{locale:'en-US',name : 'United States'},{locale:'en-GB',name:'United Kingdom'}]">
+            <p>Looping with ng-repeat:</p>
+            <ol>
+                <li ng-repeat="country in countries">
+                    {{'Country: '+ country.name + ',Locale :' + country.locale}}
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

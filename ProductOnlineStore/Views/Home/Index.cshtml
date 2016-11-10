@@ -1,6 +1,35 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
-<div></div>
-<H1>Welcome</H1>
-<p>this is a test message</p>
+
+<h3>@ViewBag.Message</h3>
+<div ng-app="app" ng-controller="ProductController as productCtrl">
+    <p>
+        <span>Category:</span>
+    </p>
+    @*<select ng-model="productCtrl.category">
+        <option ng-value="0"> ---Please Select---{{ala}} </option>
+        <
+        <option ng-repeat="cat in productCtrl.categories" ng- >{{cat.Name}}</option>
+    </select>*@
+    
+  
+    <select ng-options="cat.Name for cat in productCtrl.categories track by cat.Id" ng-model="productCtrl.category " ></select>
+
+    <div>{{productCtrl.title}}</div>
+    <div  id="grid1" class="grid" ui-grid="productCtrl.gridOptions"></div>  
+
+   
+
+
+
+<script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/ng-grid.js"></script>
+<script type="text/javascript" src="/Scripts/angular.js"></script>
+<script type="text/javascript" src="/Scripts/ui-grid.js"></script>
+<script type="text/javascript" src="/Scripts/angular-touch.js"></script>
+<script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+
+<link rel="stylesheet" href="/Content/ui-grid.css" type="text/css">
+ <link rel="stylesheet" href="/Content/Style.css" type="text/css">
+<script type="text/javascript" src="/app/product.controller.js"></script>
