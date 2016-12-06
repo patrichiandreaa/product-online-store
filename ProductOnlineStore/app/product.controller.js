@@ -1,84 +1,143 @@
-﻿(function() {
-    var app = angular.module('app', ['ngTouch', 'ui.grid']);
+﻿(function () {
+    var app = angular.module('app', ['ngTouch', 'ui.grid', 'ngGrid', 'ui.grid.resizeColumns']);
 
-    app.controller("ProductController",['$scope','$timeout', function($scope,$timeout) {
-            var vm = this;
-            vm.title = "Products";
-            vm.categories = getCategories();
-            vm.products = getProducts();
-            vm.category = vm.categories[1];
-            vm.onCategoryChange = onCategoryChange;
+    app.controller("ProductController", ['$scope', function ($scope) {
+        var vm = this;
+        vm.title = "Products";
+        vm.categories = getCategories();
+        vm.allProducts = allProducts();
+        vm.category = vm.categories[0];
+        vm.onCategoryChange = onCategoryChange;
+        vm.products = getFilteredData();
 
-            vm.products = vm.products.filter(function (item) {
-                return (item.Category === vm.category.Name);
+
+        vm.gridOptions =
+        {
+            data: vm.products,
+            columnDefs: getColumnDefinition(),
+            filterOptions: { filterText: '', useExternalFilter: true }
+        };
+
+        vm.gridOptions1 =
+        {
+            data: [],
+            columnDefs: getColumnDefinitionForOrders(),
+            filterOptions: { filterText: '', useExternalFilter: true }
+
+        };
+
+        function onCategoryChange($event) {
+            vm.gridOptions.data = getFilteredData();
+        }
+
+
+        function getFilteredData() {
+            return vm.allProducts.filter(function (item) {
+                return item.Quantity > 0 && (item.Category === vm.category.Name || vm.category.Id === 0);
             });
-        
-            function onCategoryChange($event) {
-                
+        }
+
+
+        function getColumnDefinition() {
+            return [
+                { field: 'Name', displayName: 'Name' },
+                { field: 'Price', displayName: 'Price' },
+                { field: 'Quantity', displayName: 'Quantity' },
+                { field: 'Category', displayName: 'Category' },
+                {
+                    name: 'Add to Cart',
+                    cellTemplate: '/app/GridOptionTemplate.html'
+                },
+                {
+                    name: 'Remove',
+                    cellTemplate: '/app/RemoveItemTemplate.html'
+                }
+            ];
+        }
+
+        function getColumnDefinitionForOrders() {
+            return [
+                { field: 'Product', displayName: 'Product' },
+                { field: 'Quantity', displayName: 'Quantity' },
+                { field: 'Price', displayName: 'Price', cellFilter: 'currency' },
+                { field: 'Category', displayName: 'Category', width: '*' },
+                { field: 'Date', cellFilter: 'date:\'MM/dd/yyyy\'', width: '20%' },
+                { field: 'Total', displayName: 'Total', cellFilter: 'currency' },
+                { name: 'Remove', cellTemplate: '/app/RemoveItemTemplate.html'  }
+            ];
+        }
+
+        $scope.addRowsToSecondGrid = function (rowEntity) {
+            var rowId = {};
+            angular.forEach(vm.gridOptions1.data,
+                function (item) {
+                    if (item.ProductId === rowEntity.ProductId) {
+                        rowId = item;
+                    }
+                });
+            if (angular.equals(rowId, {})) {
+                vm.gridOptions1.data.push({
+                    'OrderId': 1,
+                    'ProductId': rowEntity.ProductId,
+                    'Product': rowEntity.Name,
+                    'Quantity': rowEntity.Quantity,
+                    'Category': rowEntity.Category,
+                    'Price': rowEntity.Price,
+                    'Date': Date.now(),
+                    'Total': rowEntity.Price
+                    
+                });
+                rowEntity.Quantity--;
+                return;
+           
             }
-            vm.gridOptions =
-            {
-                data: vm.products,
-                columnDefs: getColumnDefinition(),
-                filterOptions: { filterText: '', useExternalFilter: true }
-            };
 
+            rowEntity.Quantity--;
+            rowId.Quantity++;
+            rowId.Total = $scope.getTotal(rowId);
+            rowId.Remove = $scope.removeItems(rowId);
+        }
 
-            function getCategories() {
-                return [
-                    { Id: 1, Name: 'Material' },
-                    { Id: 2, Name: 'Food' }
-                ];
+        $scope.checkStock = function(rowEntity) {
+            if (rowEntity.Quantity <= 0) {
+                return true;
             }
+            return false;
+        }
 
-            function getProducts() {
-                return [
-                    { Id: 1, Name: 'Product1', Quantity: 20, Price: '3$', Category: vm.categories[0].Name },
-                    { Id: 2, Name: 'Product2', Quantity: 10, Price: '4$', Category: vm.categories[1].Name }
-                ];
-            }
-
-            function getColumnDefinition() {
-                return [
-                    { field: 'Id', displayName: 'Id' },
-                    { field: 'Name', displayName: 'Name' },
-                    { field: 'Price', displayName: 'Price' },
-                    { field: 'Quantity', displayName: 'Quantity' }
-                ];
+        $scope.removeItems = function (rowEntity) {
+            var idx = vm.products.indexOf(rowEntity);
+            if (idx >= 0) {
+                rowEntity.splice(idx, 1);
             }
 
         }
+
+        $scope.getTotal = function (rowEntity) {
+          console.log(rowEntity.Quantity);
+          console.log(rowEntity.Price);
+          console.log(rowEntity.Quantity * rowEntity.Price);
+            return rowEntity.Quantity * rowEntity.Price;
+        }
+         
+        function getCategories() {
+            return [
+                { Id: 0, Name: '---Please select---' },
+                { Id: 1, Name: 'Material' },
+                { Id: 2, Name: 'Food' },
+                { Id: 3, Name: 'Accessories' }
+            ];
+        }
+
+     
+        function allProducts() {
+            return [
+                { ProductId: 1, Name: 'Product1', Quantity: 20, Price: '3', Category: vm.categories[1].Name },
+                { ProductId: 2, Name: 'Product2', Quantity: 10, Price: '4', Category: vm.categories[2].Name },
+                { ProductId: 3, Name: 'Product3', Quantity: 11, Price: '6', Category: vm.categories[3].Name },
+                { ProductId: 4, Name: 'Product4', Quantity: 1, Price: '4', Category: vm.categories[3].Name }
+            ];
+        }
+    }
     ]);
 })();
-//(function () {
-//    var app = angular.module('app', ['ngTouch', 'ui.grid']);
-//    app.controller("ProductController", ['$scope', '$http', function ($scope, $http) {
-//     var vm = this;
-//        $http.get('/app/product.json')
-//                .success(function (data) {
-//                    $scope.myData = data;
-//                })
-//                .error(function (data, status, headers, config) {
-//                    console.log('error');
-//                });
-
-//        vm.filterOptions =
-//        {
-//            filterText: ''
-//        };
-//        vm.gridOptions =
-//   {
-//       data: 'product.json',
-//       columnDefs: [
-//           { field: 'Id', displayName: 'Id' },
-//           { field: 'Name', displayName: 'Name' },
-//           { field: 'Price', displayName: 'Price' },
-//           { field: 'Quantity', displayName: 'Quantity' }],
-//       filterOptions:vm.filterOptions
-//   };
-//        vm.title = "Products";
-//        }]);
-// })();
-
-
-

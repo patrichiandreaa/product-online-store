@@ -1,43 +1,48 @@
-﻿{
-  "products": [
+﻿
+  [
     {
-       "Id": 1,
+      "Id": 1,
       "Name": " Product1",
       "Price": 20,
       "Quantity": 100,
-      "Category": "Food", 
-      "Country": "Germany"
+      "Category": "Food",
+      "Country": "Germany",
+      "Rating": 4 
     },
     {
-       "Id": 2,
+      "Id": 2,
       "Name": " Product2",
       "Price": 30,
       "Quantity": 90,
-      "Category": "Food", 
-       "Country": "Germany"
+      "Category": "Food",
+      "Country": "Germany",
+      "Rating": 3
     },
     {
-       "Id": 3,
+      "Id": 3,
       "Name": " Product3",
       "Price": 20,
       "Quantity": 20,
-      "Category": "Hair products", 
-       "Country": "China"
+      "Category": "Hair products",
+      "Country": "China",
+      "Rating": 5
     },
     {
-       "Id": 4,
+      "Id": 4,
       "Name": " Product4",
       "Price": 40,
       "Quantity": 30,
       "Category": "Bikes",
-      "Country": "Germany"
+      "Country": "Germany",
+      "Rating":3 
     },
-    {"Id": 5,
+    {
+      "Id": 5,
       "Name": " Product5",
       "Price": 20,
       "Quantity": 30,
       "Category": "Accessories",
-      "Country": "UK"
+      "Country": "UK",
+      "Rating": 4 
     }
   ]
-}

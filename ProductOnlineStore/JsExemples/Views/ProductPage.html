@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="/JsExemples/ScriptDom.js"></script>
+    <link rel="stylesheet" href="/JsExemples/select_jquery.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<!--Remove values frm array-->
+<button onclick="myFunction()">Show removed values</button>
+<p id="1"></p>
+<!--Exemple foreach-->
+<p>Click the button to list all the items in the array.</p>
+<button onclick="arr.forEach(display)">Display index</button>
+<p id="demoP"></p>
+<!--Focus/lose focus-->
+<a id="button1" href="http://google.com">Visit google.com</a>
+<input type="button" onclick="getfocus()" value="Get focus"/>
+<input type="button" onclick="loseFocus()" value="Lose focus" />
+<!--javascript events :mouse over-->
+    
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+     style="background-color:red;width:60px;height:20px;padding:40px;">
+    Mouse Over Me
+</div>
+    Enter your name: <input type="text" id="fname" onchange="OnChange()">
+</body>
+</html>

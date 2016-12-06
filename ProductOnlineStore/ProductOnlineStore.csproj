@@ -169,15 +169,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\footer.directive.js" />
-    <Content Include="app\footerTemplate.html" />
-    <Content Include="app\header.directive.js" />
-    <Content Include="app\headerTemplate.html" />
+    <Content Include="app\ComponentsForOnlineStore\Components\product-table\product-table.component.js" />
+    <Content Include="app\ComponentsForOnlineStore\Components\product-table\product-table.template.html" />
+    <Content Include="app\ComponentsExmple\accordion.component.js" />
+    <Content Include="app\ComponentsExmple\product-app.component.js" />
+    <Content Include="app\ComponentsExmple\product-description.component.js" />
+    <Content Include="app\ComponentsExmple\product-details.component.js" />
+    <Content Include="app\ComponentsExmple\product-fabrication.component.js" />
+    <Content Include="app\ComponentsExmple\product-list.component.js" />
+    <Content Include="app\ComponentsExmple\product-rating.component.js" />
+    <Content Include="app\ComponentsExmple\Templates\product-app.component.html" />
+    <Content Include="app\ComponentsExmple\Templates\product-description.component.html" />
+    <Content Include="app\ComponentsExmple\Templates\product-details.component.html" />
+    <Content Include="app\ComponentsExmple\Templates\product-fabrication.component.html" />
+    <Content Include="app\ComponentsExmple\Templates\product-list.component.html" />
+    <Content Include="app\ComponentsExmple\Templates\product-rating.component.html" />
+    <Content Include="app\directives\footer.directive.js" />
+    <Content Include="app\directives\footerTemplate.html" />
+    <Content Include="app\ComponentsForOnlineStore\Components\product-table\grid-option.template.html" />
+    <Content Include="app\directives\header.directive.js" />
+    <Content Include="app\directives\headerTemplate.html" />
+    <Content Include="app\productRepository.services.js" />
+    <Content Include="app\ComponentsForOnlineStore\Components\product-table\remove-item-template.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ng-grid.css" />
     <Content Include="Content\ng-grid.min.css" />
-    <Content Include="Content\Style.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\ui-grid.css" />
     <Content Include="Content\ui-grid.min.css" />
     <Content Include="Content\ui-grid.svg" />
@@ -185,6 +203,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="JsExemples\data.controller.js" />
+    <Content Include="JsExemples\GetIndex.html" />
+    <Content Include="JsExemples\Login.html" />
+    <Content Include="JsExemples\loginStyle.css" />
+    <Content Include="JsExemples\script.js" />
+    <Content Include="JsExemples\ScriptDom.js" />
+    <Content Include="JsExemples\select_jquery.css" />
+    <Content Include="JsExemples\Views\ProductPage.html" />
+    <Content Include="JsExemples\Welcome.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\angular-animate.js" />
@@ -200,11 +227,15 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-ui-router.js" />
+    <Content Include="Scripts\angular-ui-router.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -220,6 +251,7 @@
     <Content Include="Content\ui-grid.eot" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="app\product.json" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -544,7 +576,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Scripts\Product\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

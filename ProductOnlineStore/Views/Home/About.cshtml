@@ -1,7 +1,27 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "Product list";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
+<br/>
+ <div ng-app="app">
+     <product-list></product-list>
+ </div>
 
-<p>Use this area to provide additional information.</p>
+<script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/Scripts/ng-grid.js"></script>
+<script type="text/javascript" src="/Scripts/angular.js"></script>
+<script type="text/javascript" src="/Scripts/ui-grid.js"></script>
+<script type="text/javascript" src="/Scripts/angular-touch.js"></script>
+<script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+<script type="text/javascript" src="/app/Components/product-list.component.js"> </script>
+    @*<script type="text/javascript" src="/app/Components/product-rating.component.js"> </script>
+    <script type="text/javascript" src="/app/Components/product-app.component.js"></script>
+    <script type="text/javascript" src="/app/Components/product-details.component.js"></script>
+    <script type="text/javascript" src="/app/Components/accordion.component.js"></script>*@
+ @*<script type="text/javascript" src="~/app/ComponentsForOnlineStore/Component/product-table.component.js"></script>*@
+<script type="text/javascript" src="/app/product.controller.js"></script>
+<script src="/Scripts/angular-route.js"></script>
+<link rel="stylesheet" href="/Content/ui-grid.css" type="text/css">
+<link rel="stylesheet" href="/Content/style.css" type="text/css">
+<link rel="stylesheet" href="/Content/bootstrap.css"/>
+

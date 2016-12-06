@@ -1,0 +1,8 @@
+﻿
+    <p>
+        <span>Category:</span>
+    </p>
+    <select ng-options="cat.Name for cat in vm.categories track by cat.Id" ng-model="vm.category " ng-change="vm.onCategoryChange()"></select>
+    <div class="title">{{vm.title}}</div>
+    <div id="grid1" class="grid col-xs-6 table-responsive" ui-grid="vm.gridOptions"></div>
+    <div id="grid2" class="grid col-xs-6  table-responsive" ui-grid="vm.gridOptions1" ui-grid-resize-columns></div>

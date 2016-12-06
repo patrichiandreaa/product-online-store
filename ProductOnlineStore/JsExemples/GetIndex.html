@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src ="data.controller.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/ng-grid.js"></script>
+    <script type="text/javascript" src="/Scripts/angular.js"></script>
+    <script type="text/javascript" src="/Scripts/ui-grid.js"></script>
+    <script type="text/javascript" src="/Scripts/angular-touch.js"></script>
+    <script type="text/javascript" src="/Scripts/angular-animate.js"></script>
+
+    <link rel="stylesheet" href="/Content/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="/Content/style.css" type="text/css">
+    <title>Page 1</title>
+</head>
+<body ng-app ="app">
+    <div ng-controller="DemoController as DemoCtrl">
+        <input type ="text" ng-model ="demoCtrl.items" placeholder ="Filter the list" />
+        <ul>
+            <li ng-repeat ="item in  demoCtrl.items track by item.Id">
+                {{item.name}}
+                <button ng-click ="demoCtrl.getResult($index,item)">test</button>
+            </li>
+        </ul>
+        <h2>Results</h2>
+        <p><code>$index:</code>{{demlCtrl.indexResult.name}} </p>
+        <p><code>item:</code>{{demlCtrl.indexResult.name}} </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<div>
+    <!--<h3>{{vm.message}}</h3>
+    <input type="text" ng-model="vm.message"/>
+    <button ng-click ="vm.changeMessage()">Change</button>-->
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Country</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="product in vm.products">
+            <td>{{product.Name}}</td>
+            <td>{{product.Price }}</td>
+            <td>{{product.Quantity}} </td>
+            <td>{{product.Category}}</td>
+            <td>{{product.Country}}</td>
+            <td>
+                <product-rating value="product.Rating"  max ="5" set-rating="vm.setRating(product,value)">
+                    <span class="glyphicon glyphicon-star"></span>
+                </product-rating>
+            </td>
+            <td>
+
+                <button class="btn  btn-default">
+                    <span class="glyphicon glyphicon-plus" ng-click="vm.increaseQuantity(product)"></span>
+                </button>
+                <button class="btn  btn-default">
+                    <span class="glyphicon glyphicon-minus" ng-click="vm.decreaseQuantity(product)"></span>
+                </button>
+                <button   ng-click ="vm.goTo(product.Id)" class="btn btn-default">
+                    <span class="glyphicon  glyphicon-zoom-in"></span>
+                </button>
+            </td>
+
+        </tr>
+    </table>
+    <accordion>
+        <accordion-panel heading="Panel 1">
+            panel 1
+        </accordion-panel>
+        <accordion-panel heading="Panel 2">
+            panel 2
+        </accordion-panel>
+    </accordion>
+</div>

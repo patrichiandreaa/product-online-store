@@ -1,40 +1,54 @@
 ﻿p.header {
-   
-    margin-left:700px;
-    padding: auto;
-       color: black;
+
+    text-align: center;
     font-weight: bold;
-    font-weight: 900;
     margin-top: 10px;
 }
  .grid {
     border: 1px solid rgb(212,212,212);
     width: 500px; 
     height: 300px;
+     margin-left: 18px;
 }
-  #f1 {
-      
-      font-weight: bold;
-      margin-left: 840px;
-      padding-bottom: 10px;
-      padding-bottom: 10px;
-   }
 
 .navbar-inverse {
     background: white;
+    border: 1px solid rgb(212,212,212);
 }
  footer {
-     border: lightgray;
-     border-style: solid;
-     border-width: 1px;
-     margin-top: 10px;
+     
+     border: 1px solid rgb(212,212,212);
+     text-align: center;
+     font-weight: bold;
      padding-bottom: 30px;
-    font-weight: bold;
-    font-weight: 900;
  } 
 
- .navbar-default {
+
+ div.ui-grid-viewport.ng-isolate-scope {
+     overflow: hidden;
+ }
+ .navbar.navbar-inverse.navbar-fixed-top {
+     border-bottom: 0;
+ }
+.glyphicon {
+    margin-left: 30px;
+}
+.title {
+    margin-left: 19px;
+}
+
+ .addBtn.btn.btn-mini.glyphicon.glyphicon-plus {
      background-color: whitesmoke;
  }
+ .removeBtn.btn.btn-mini.glyphicon.glyphicon-trash {
+     background-color: whitesmoke;
+ }
+ .col-xs-6 {
+     padding-right: 0;
+     padding-left: 0;
+     margin-left: 10px;
+ }
+
+
 
  
